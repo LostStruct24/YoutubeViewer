@@ -15,10 +15,10 @@ class SearchBar extends Component {
 
     render () {
         return (
-          <div className="search-bar ui segment" >
+          <div className="ui segment" >
             <form onSubmit={this.onFormSubmit} className="ui form">
                 <div className="field">
-                    <label>YoutubeViewer</label>
+                    <label style={{ fontSize: '20px', marginBottom: '15px', color: '#1c0707'}}>YoutubeViewer</label>
                     <input 
                     type="text" 
                     value={this.state.term} 

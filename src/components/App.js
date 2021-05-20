@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from "react-helmet";
 import SearchBar from './SearchBar';
 import youtube from '../apis/youtube';
 import VideoList from './VideoList';
@@ -16,7 +17,11 @@ class App extends Component {
 
     render () {
         return (
-            <div className = "ui container">
+            <div className="ui container">
+                <Helmet>
+                    <title>YoutubeViewer</title>
+                </Helmet>
+
                 <SearchBar onFormSubmit={this.onTermSubmit} />
                 <VideoList videos={this.state.videos} />
             </div>
